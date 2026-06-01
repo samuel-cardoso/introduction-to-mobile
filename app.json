@@ -2,7 +2,9 @@
   "expo": {
     "name": "introduction-to-mobile",
     "slug": "introduction-to-mobile",
+    "scheme": "intro-mobile",
     "version": "1.0.0",
+    "plugins": [["expo-router", { "root": "./app" }]],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,7 +26,8 @@
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
     }
   }
 }

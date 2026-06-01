@@ -1,0 +1,29 @@
+import "react-native-gesture-handler";
+import "../global.css";
+
+import { Stack } from "expo-router";
+import { StatusBar } from "expo-status-bar";
+
+export default function RootLayout() {
+  return (
+    <>
+      <StatusBar style="dark" />
+      <Stack
+        screenOptions={{
+          headerStyle: { backgroundColor: "#f8fafc" },
+          headerTintColor: "#0f172a",
+          headerTitleStyle: { fontWeight: "600" },
+          contentStyle: { backgroundColor: "#f8fafc" },
+        }}
+      >
+        <Stack.Screen name="index" options={{ title: "Intro Mobile" }} />
+        <Stack.Screen name="demo/layout" options={{ title: "Layout" }} />
+        <Stack.Screen name="demo/inputs" options={{ title: "Formulários" }} />
+        <Stack.Screen name="demo/lists" options={{ title: "Listas" }} />
+        <Stack.Screen name="demo/platform" options={{ title: "Plataforma" }} />
+        <Stack.Screen name="tasks/index" options={{ title: "Tarefas" }} />
+        <Stack.Screen name="tasks/new" options={{ title: "Nova tarefa" }} />
+      </Stack>
+    </>
+  );
+}
