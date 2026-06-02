@@ -69,8 +69,8 @@ export default function CameraDemoScreen() {
 
   return (
     <Screen
-      title="Câmera"
-      subtitle="Abra a câmera nativa, capture uma foto e veja o preview abaixo usando o componente Image."
+      title="Image Picker"
+      subtitle="Abre a câmera nativa do sistema — compare com o módulo expo-camera na home."
     >
       <Card>
         <Card.Header>

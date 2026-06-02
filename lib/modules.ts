@@ -31,10 +31,17 @@ export const LEARNING_MODULES: LearningModule[] = [
   },
   {
     id: "camera",
-    title: "Câmera",
-    description: "Permissões, captura de foto e preview com Image.",
+    title: "Image Picker",
+    description: "Câmera nativa do sistema — launchCameraAsync e galeria.",
     href: "/demo/camera",
     topics: ["ImagePicker", "Permissões", "Image"],
+  },
+  {
+    id: "camera-view",
+    title: "expo-camera",
+    description: "Preview ao vivo no app com CameraView e takePictureAsync.",
+    href: "/demo/camera-view",
+    topics: ["CameraView", "useRef", "Preview"],
   },
   {
     id: "tasks",

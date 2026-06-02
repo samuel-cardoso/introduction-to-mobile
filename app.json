@@ -13,6 +13,14 @@
           "photosPermission": "Permitir que o app acesse fotos, se necessário.",
           "microphonePermission": false
         }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permitir que o app use a câmera para o preview ao vivo.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false
+        }
       ]
     ],
     "orientation": "portrait",
