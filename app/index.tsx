@@ -1,3 +1,4 @@
+import { Surface } from "heroui-native";
 import { Text, View } from "react-native";
 
 import { ModuleCard } from "@/components/ModuleCard";
@@ -11,12 +12,14 @@ export default function HomeScreen() {
       subtitle="Toque em um módulo para ver conceitos básicos de React Native com Expo."
       scroll
     >
-      <View className="rounded-2xl bg-blue-600 p-4">
-        <Text className="text-sm font-medium text-blue-100">React Native + Expo 54</Text>
-        <Text className="mt-1 text-lg font-bold text-white">
+      <Surface className="bg-accent p-4">
+        <Text className="text-sm font-medium text-accent-foreground opacity-80">
+          React Native + Expo 54
+        </Text>
+        <Text className="mt-1 text-lg font-bold text-accent-foreground">
           Playground para aprender o essencial
         </Text>
-      </View>
+      </Surface>
 
       <View className="gap-3">
         {LEARNING_MODULES.map((module) => (

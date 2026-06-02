@@ -1,8 +1,8 @@
-import { useCallback, useState } from "react";
-import { ActivityIndicator, FlatList, Text, View } from "react-native";
 import { router, useFocusEffect } from "expo-router";
+import { Button, Spinner, Surface } from "heroui-native";
+import { useCallback, useState } from "react";
+import { FlatList, Text, View } from "react-native";
 
-import { Button } from "@/components/Button";
 import { Screen } from "@/components/Screen";
 import { TaskItem } from "@/components/TaskItem";
 import { loadTasks, saveTasks } from "@/lib/tasks-storage";
@@ -53,30 +53,37 @@ export default function TasksScreen() {
       scroll={false}
     >
       <View className="flex-row items-center justify-between">
-        <Text className="text-sm text-slate-600">
+        <Text className="text-sm text-muted">
           {pending} pendente{pending === 1 ? "" : "s"} · {tasks.length} no total
         </Text>
-        <Button label="Nova tarefa" onPress={() => router.push("/tasks/new")} />
+        <Button size="sm" onPress={() => router.push("/tasks/new")}>
+          Nova tarefa
+        </Button>
       </View>
 
       {loading ? (
-        <ActivityIndicator className="mt-8" size="large" color="#2563eb" />
+        <View className="mt-8 items-center">
+          <Spinner size="lg" />
+        </View>
       ) : (
         <FlatList
           className="mt-4 flex-1"
           data={tasks}
           keyExtractor={(item) => item.id}
           contentContainerClassName="gap-2 grow pb-4"
-          ItemSeparatorComponent={() => <View className="h-0" />}
           renderItem={({ item }) => (
             <TaskItem task={item} onToggle={toggleTask} onDelete={deleteTask} />
           )}
           ListEmptyComponent={
-            <View className="items-center rounded-2xl border border-dashed border-slate-300 bg-white p-8">
-              <Text className="text-center text-slate-600">
-                Nenhuma tarefa ainda.{"\n"}Toque em &quot;Nova tarefa&quot; para começar.
+            <Surface
+              variant="secondary"
+              className="items-center border border-dashed border-border p-8"
+            >
+              <Text className="text-center text-muted">
+                Nenhuma tarefa ainda.{"\n"}Toque em &quot;Nova tarefa&quot; para
+                começar.
               </Text>
-            </View>
+            </Surface>
           }
         />
       )}
