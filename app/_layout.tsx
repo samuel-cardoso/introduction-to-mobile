@@ -25,6 +25,7 @@ export default function RootLayout() {
           <Stack.Screen name="demo/inputs" options={{ title: "Formulários" }} />
           <Stack.Screen name="demo/lists" options={{ title: "Listas" }} />
           <Stack.Screen name="demo/platform" options={{ title: "Plataforma" }} />
+          <Stack.Screen name="demo/camera" options={{ title: "Câmera" }} />
           <Stack.Screen name="tasks/index" options={{ title: "Tarefas" }} />
           <Stack.Screen name="tasks/new" options={{ title: "Nova tarefa" }} />
         </Stack>

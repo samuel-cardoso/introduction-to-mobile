@@ -30,6 +30,13 @@ export const LEARNING_MODULES: LearningModule[] = [
     topics: ["Platform", "Dimensions", "StatusBar"],
   },
   {
+    id: "camera",
+    title: "Câmera",
+    description: "Permissões, captura de foto e preview com Image.",
+    href: "/demo/camera",
+    topics: ["ImagePicker", "Permissões", "Image"],
+  },
+  {
     id: "tasks",
     title: "Projeto: Tarefas",
     description: "CRUD completo com navegação e AsyncStorage.",

@@ -4,7 +4,17 @@
     "slug": "introduction-to-mobile",
     "scheme": "intro-mobile",
     "version": "1.0.0",
-    "plugins": [["expo-router", { "root": "./app" }]],
+    "plugins": [
+      ["expo-router", { "root": "./app" }],
+      [
+        "expo-image-picker",
+        {
+          "cameraPermission": "Permitir que o app use a câmera para tirar fotos no demo.",
+          "photosPermission": "Permitir que o app acesse fotos, se necessário.",
+          "microphonePermission": false
+        }
+      ]
+    ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
