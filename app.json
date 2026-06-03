@@ -5,7 +5,12 @@
     "scheme": "intro-mobile",
     "version": "1.0.0",
     "plugins": [
-      ["expo-router", { "root": "./app" }],
+      [
+        "expo-router",
+        {
+          "root": "./app"
+        }
+      ],
       [
         "expo-image-picker",
         {
@@ -21,7 +26,8 @@
           "microphonePermission": false,
           "recordAudioAndroid": false
         }
-      ]
+      ],
+      "expo-video"
     ],
     "orientation": "portrait",
     "icon": "./assets/icon.png",

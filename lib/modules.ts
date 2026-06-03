@@ -44,6 +44,13 @@ export const LEARNING_MODULES: LearningModule[] = [
     topics: ["CameraView", "useRef", "Preview"],
   },
   {
+    id: "video",
+    title: "Vídeo",
+    description: "Player com expo-video, play/pause e tela cheia.",
+    href: "/demo/video",
+    topics: ["VideoView", "useVideoPlayer", "Streaming"],
+  },
+  {
     id: "tasks",
     title: "Projeto: Tarefas",
     description: "CRUD completo com navegação e AsyncStorage.",
